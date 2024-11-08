@@ -1,0 +1,29 @@
+.label {
+	position: relative;
+
+	&::after {
+		content: '';
+		@include square(24px);
+		@include abs-center-y;
+		left: 16px;
+	}
+}
+
+.input {
+	height: var(--input-height-large);
+	border: 1px solid transparent;
+	border-radius: var(--border-radius-controls);
+	padding-inline: 52px 16px;
+
+	@include tablet {
+		height: var(--input-height-small);
+	}
+
+	@include hover {
+		border: var(--border);
+	}
+}
+
+.input--grey-bg {
+	background-color: var(--color-light-grey);
+}

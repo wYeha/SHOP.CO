@@ -1,0 +1,24 @@
+.button {
+	height: var(--button-height-large);
+	border: var(--border);
+	border-radius: var(--border-radius-controls);
+	color: var(--color-black);
+
+	&--dark {
+		background-color: var(--color-black);
+		color: var(--color-white);
+
+		@include hover {
+			background: rgba(0, 0, 0, 0.3);
+			color: var(--color-black);
+		}
+
+		&:active {
+			background: rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	@include tablet {
+		height: var(--button-height-small);
+	}
+}

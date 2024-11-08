@@ -1,0 +1,126 @@
+.intro {
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		row-gap: 48px;
+		height: 663px;
+
+		@include desktop {
+			height: 560px;
+		}
+
+		@include mobile {
+			height: 853px;
+			row-gap: 20px;
+		}
+	}
+
+	&__body {
+		width: 100%;
+	}
+
+	&__title {
+		line-height: 100%;
+		margin-top: 96px;
+		margin-bottom: 32px;
+		max-width: 577px;
+
+		@include desktop {
+			margin-top: 48px;
+			max-width: 500px;
+		}
+
+		@include tablet {
+			max-width: 400px;
+		}
+
+		@include mobile {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	&__description {
+		margin-bottom: 37px;
+		max-width: 35vw;
+
+		@include mobile {
+			margin-bottom: 24px;
+			max-width: 100%;
+		}
+	}
+
+	&__button {
+		padding-inline: 68px;
+
+		@include mobile {
+			display: block;
+			padding-inline: 138px;
+			margin-inline: auto;
+		}
+	}
+
+	&__statistics {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 12px;
+		column-gap: 10px;
+		max-width: 41vw;
+
+		@include tablet {
+			justify-content: flex-start;
+			column-gap: 30px;
+		}
+
+		@include mobile {
+			justify-content: center;
+			align-items: center;
+			max-width: 100%;
+		}
+	}
+
+	&__statistics-element {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__statistics-text {
+		white-space: nowrap;
+	}
+
+	&__statistics-number {
+		font-family: var(--font-family-base);
+		font-weight: 700;
+		font-size: 40px;
+		color: var(--color-black);
+
+		@include desktop {
+			font-size: 32px;
+		}
+	}
+
+}
+
+.background-intro {
+	background: no-repeat url('../images/intro-image.jpg');
+	background-position: right 50px top 0px;
+	background-size: contain;
+	background-color: var(--color-light-grey);
+
+	@include desktop {
+		background-position: right 0px top 0px;
+	}
+
+	@include tablet {
+		background-position: right -20px top 0px;
+	}
+
+	@include mobile {
+		background-position: bottom;
+		background-size: auto clamp(390px, 100vw, 460px);
+	}
+}
