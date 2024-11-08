@@ -1,0 +1,41 @@
+.new-arrivals {
+
+	&__title {
+		margin-bottom: 55px;
+		text-align: center;
+
+		@include desktop {
+			margin-bottom: 46px;
+		}
+
+		@include mobile {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(4, 295px);
+		gap: 20px;
+		scrollbar-width: none;
+		scrollbar-color: transparent transparent;
+		overflow-x: scroll;
+
+
+		@include desktop {
+			gap: 16px;
+			grid-template-columns: repeat(4, minmax(230px, 1fr));
+		}
+
+		@include tablet {
+			margin-inline: -16px;
+			padding-inline: 16px;
+		}
+
+		@include mobile {
+			grid-template-columns: repeat(4, 200px);
+		}
+	}
+
+	&__product-card {}
+}

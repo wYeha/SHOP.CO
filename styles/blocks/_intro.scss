@@ -69,7 +69,8 @@
 		justify-content: space-between;
 		row-gap: 12px;
 		column-gap: 10px;
-		max-width: 41vw;
+		width: 41vw;
+		max-width: 596px;
 
 		@include tablet {
 			justify-content: flex-start;
@@ -80,6 +81,7 @@
 			justify-content: center;
 			align-items: center;
 			max-width: 100%;
+			width: unset;
 		}
 	}
 

@@ -1,9 +1,9 @@
 @import 'normalize',
 'fonts',
+'media',
 'vars',
 'mixins',
 'globals',
-'media',
 'utils';
 
 @import 'blocks/burger',
@@ -13,4 +13,7 @@
 'blocks/cross-button',
 'blocks/intro',
 'blocks/button',
-'blocks/partners';
+'blocks/partners',
+'blocks/product-card',
+'blocks/new-arrivals',
+'blocks/rating';

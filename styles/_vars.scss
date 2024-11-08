@@ -17,7 +17,7 @@
 	--controls-padding-y: 12px;
 	--controls-padding-x: 12px;
 
-	--section-padding-y: 40px;
+	--section-margin-y: 80px;
 
 	--input-height-large: 48px;
 	--input-height-small: 42px;
@@ -32,4 +32,16 @@
 	--container-padding-x: 16px;
 
 	--transition: 0.2s;
+
+	@include desktop {
+		--section-margin-y: 70px;
+	}
+
+	@include tablet {
+		--section-margin-y: 60px;
+	}
+
+	@include mobile {
+		--section-margin-y: 50px;
+	}
 }
