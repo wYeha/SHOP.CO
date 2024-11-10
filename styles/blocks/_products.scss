@@ -1,4 +1,5 @@
-.new-arrivals {
+.products {
+	margin-bottom: var(--section-margin-y);
 
 	&__title {
 		margin-bottom: 55px;
@@ -38,4 +39,10 @@
 	}
 
 	&__product-card {}
+
+	&__button {
+		display: block;
+		padding-inline: 80px;
+		margin-inline: auto;
+	}
 }

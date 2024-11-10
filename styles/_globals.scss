@@ -42,3 +42,10 @@ h2 {
 h3 {
 	@include fluid-text(36, 24);
 }
+
+.divider {
+	background: rgba(#000000, 0.1);
+	height: 1px;
+	border: none;
+	margin-bottom: var(--section-margin-y);
+}

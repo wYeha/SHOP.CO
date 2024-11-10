@@ -3,13 +3,23 @@
 	border: var(--border);
 	border-radius: var(--border-radius-controls);
 	color: var(--color-black);
+	background: transparent;
+
+	@include hover {
+		background: var(--color-black);
+		color: var(--color-white);
+	}
+
+	&:active {
+		background: rgba(0, 0, 0, 0.6);
+	}
 
 	&--dark {
-		background-color: var(--color-black);
+		background: var(--color-black);
 		color: var(--color-white);
 
 		@include hover {
-			background: rgba(0, 0, 0, 0.3);
+			background: transparent;
 			color: var(--color-black);
 		}
 
