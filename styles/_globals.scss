@@ -7,6 +7,12 @@ body {
 	background-color: var(--color-white);
 }
 
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
 a,
 button,
 input,

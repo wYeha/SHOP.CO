@@ -243,6 +243,12 @@ body {
   background-color: var(--color-white);
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 a,
 button,
 input,
@@ -1293,12 +1299,95 @@ h3 {
   }
 }
 
-.slider__title {
+.reviews {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+}
+.reviews__slider-content {
+  grid-column: span 2;
+  position: relative;
+}
+.reviews__slider {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  left: calc(-1 * (33.333333% + 6px));
+  left: 0;
+  transition: var(--transition);
+}
+.reviews__item {
+  min-height: 240px;
+  max-width: 400px;
+  width: calc(33.333333% - 14px);
+  flex-shrink: 0;
+  padding: 28px;
+  border-radius: var(--border-radius-large);
+  border: var(--border);
+}
+.reviews__rating {
+  margin-bottom: 15px;
+}
+.reviews__username {
   position: relative;
   font-size: clamp(16px, 1.3888888889vw, 20px);
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-base);
+  padding-bottom: 12px;
 }
-.--has-verification::after {
+.reviews__username--has-verification::after {
   position: absolute;
-  right: 0;
+  right: -30px;
+  width: 24px;
+  aspect-ratio: 1;
   content: url("../images/svg/review-verif.svg");
+}
+.slider-controls {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.slider-controls--left, .slider-controls--right {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  aspect-ratio: 1;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .slider-controls--left:hover, .slider-controls--right:hover {
+    scale: 1.1;
+    border-radius: 5px;
+    background-color: var(--color-light-grey);
+  }
+}
+@media (hover: none) {
+  .slider-controls--left:active, .slider-controls--right:active {
+    scale: 1.1;
+    border-radius: 5px;
+    background-color: var(--color-light-grey);
+  }
+}
+.slider-controls--left::after {
+  content: url("../images/svg/arrow-left.svg");
+}
+.slider-controls--right::after {
+  content: url("../images/svg/arrow-right.svg");
+}
+.slider-controls--left::after, .slider-controls--right::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

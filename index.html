@@ -70,12 +70,12 @@
 	<main class="content">
 
 		<style>
-			/* .background-intro,
+			.background-intro,
 			.background-partners,
 			.products,
 			.dress-style {
 				display: none;
-			} */
+			}
 		</style>
 
 		<div class="background-intro">
@@ -323,59 +323,78 @@
 			</div>
 		</section>
 
-		<section class="reviews slider container">
+		<section class="reviews container">
 			<h2 class="reviews__title">OUR HAPPY CUSTOMERS</h2>
-			<div class="reviews__slider-controls slider__controls">
-				<button class="slider__controls--left" type="button"></button>
-				<button class="slider__controls--left" type="button"></button>
+			<div class="reviews__controls slider-controls">
+				<button class="slider-controls--left" type="button" id="sliderLeft" onclick="slideToLeft()" disabled></button>
+				<button class="slider-controls--right" type="button" id="sliderRight" onclick="slideToRight()"></button>
 			</div>
-			<div class="reviews__slider slider__content">
-				<article class="slider__item">
-					<div class="slider__rating rating">
-						<div class="stars stars--5 stars--no-number"></div>
-					</div>
-					<h4 class="slider__title --has-verification">Sarah M.</h4>
-					<p class="slider__text">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
-						casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-				</article>
 
-				<article class="slider__item">
-					<div class="slider__rating rating">
-						<div class="stars stars--5 stars--no-number"></div>
-					</div>
-					<h4 class="slider__title --has-verification">Alex K.</h4>
-					<p class="slider__text">"Finding clothes that align with my personal style used to be a challenge until I
-						discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and
-						occasions.”</p>
-				</article>
+			<div class="reviews__slider-content">
+				<div class="reviews__slider slider">
+					<article class="reviews__item slider__item">
+						<div class="reviews__rating rating">
+							<div class="stars stars--5 stars--no-number"></div>
+						</div>
+						<h4 class="reviews__username reviews__username--has-verification">Sarah M.</h4>
+						<div class="reviews__text">
+							<p class="casual-text">"I'm blown away by the quality and style of the clothes I received from
+								Shop.co. From
+								casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+						</div>
+					</article>
 
-				<article class="slider__item">
-					<div class="slider__rating rating">
-						<div class="stars stars--5 stars--no-number"></div>
-					</div>
-					<h4 class="slider__title --has-verification">James L.</h4>
-					<p class="slider__text">"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to
-						have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest
-						trends.”</p>
-				</article>
+					<article class="reviews__item slider__item">
+						<div class="reviews__rating rating">
+							<div class="stars stars--5 stars--no-number"></div>
+						</div>
+						<h4 class="reviews__username reviews__username--has-verification">Alex K.</h4>
+						<div class="reviews__text">
+							<p class="casual-text">"Finding clothes that align with my personal style used to be a challenge until I
+								discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes
+								and occasions.”</p>
+						</div>
+					</article>
 
-				<article class="slider__item">
-					<div class="slider__rating rating">
-						<div class="stars stars--5 stars--no-number"></div>
-					</div>
-					<h4 class="slider__title --has-verification">Sarah M.</h4>
-					<p class="slider__text">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
-						casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-				</article>
+					<article class="reviews__item slider__item">
+						<div class="reviews__rating rating">
+							<div class="stars stars--5 stars--no-number"></div>
+						</div>
+						<h4 class="reviews__username reviews__username--has-verification">James L.</h4>
+						<div class="reviews__text">
+							<p class="casual-text">"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to
+								have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the
+								latest
+								trends.”</p>
+						</div>
+					</article>
 
-				<article class="slider__item">
-					<div class="slider__rating rating">
-						<div class="stars stars--5 stars--no-number"></div>
-					</div>
-					<h4 class="slider__title --has-verification">Sarah M.</h4>
-					<p class="slider__text">"I'm blown away by the quality and style of the clothes I received from Shop.co. From
-						casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
-				</article>
+					<article class="reviews__item slider__item">
+						<div class="reviews__rating rating">
+							<div class="stars stars--5 stars--no-number"></div>
+						</div>
+						<h4 class="reviews__username reviews__username--has-verification">Sarah M.</h4>
+						<div class="reviews__text">
+							<p class="casual-text">"I'm blown away by the quality and style of the clothes I received from
+								Shop.co. From
+								casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+						</div>
+					</article>
+
+					<article class="reviews__item slider__item">
+						<div class="reviews__rating rating">
+							<div class="stars stars--5 stars--no-number"></div>
+						</div>
+						<h4 class="reviews__username reviews__username--has-verification">Sarah M.</h4>
+
+						<div class="reviews__text">
+							<p class="casual-text">"I'm blown away by the quality and style of the clothes I received from
+								Shop.co. From
+								casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+						</div>
+
+					</article>
+				</div>
 			</div>
 		</section>
 
