@@ -1,0 +1,32 @@
+.reviews {
+	&__title {}
+
+	&__slider-controls {}
+
+	&__slider {}
+}
+
+.slider {
+	&__controls {}
+
+	&__controls--left {}
+
+	&__content {}
+
+	&__item {}
+
+	&__rating {}
+
+	&__title {
+		position: relative;
+		@include fluid-text(20, 16);
+	}
+
+	&__text {}
+}
+
+.--has-verification::after {
+	position: absolute;
+	right: 0;
+	content: url('../images/svg/review-verif.svg');
+}

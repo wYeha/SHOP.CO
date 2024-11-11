@@ -979,7 +979,18 @@ h3 {
 .products__button {
   display: block;
   padding-inline: 80px;
+  margin-top: 30px;
   margin-inline: auto;
+}
+@media (max-width: 1280px) {
+  .products__button {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .products__button {
+    margin-top: 24px;
+  }
 }
 
 .rating {
@@ -990,6 +1001,9 @@ h3 {
 .stars {
   height: 100%;
   background: url("../images/svg/star.svg");
+}
+.stars--no-number::after {
+  display: none;
 }
 .stars--05, .stars--1, .stars--15, .stars--2, .stars--25, .stars--3, .stars--35, .stars--4, .stars--45, .stars--5 {
   position: relative;
@@ -1277,4 +1291,14 @@ h3 {
   .dress-style__image--gym {
     left: 57%;
   }
+}
+
+.slider__title {
+  position: relative;
+  font-size: clamp(16px, 1.3888888889vw, 20px);
+}
+.--has-verification::after {
+  position: absolute;
+  right: 0;
+  content: url("../images/svg/review-verif.svg");
 }/*# sourceMappingURL=style.css.map */
