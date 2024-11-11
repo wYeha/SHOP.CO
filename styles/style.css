@@ -1363,15 +1363,19 @@ h3 {
   position: relative;
   cursor: pointer;
 }
+.slider-controls--left:disabled, .slider-controls--right:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
 @media (hover: hover) {
-  .slider-controls--left:hover, .slider-controls--right:hover {
+  .slider-controls--left:hover:not(:disabled), .slider-controls--right:hover:not(:disabled) {
     scale: 1.1;
     border-radius: 5px;
     background-color: var(--color-light-grey);
   }
 }
 @media (hover: none) {
-  .slider-controls--left:active, .slider-controls--right:active {
+  .slider-controls--left:active:not(:disabled), .slider-controls--right:active:not(:disabled) {
     scale: 1.1;
     border-radius: 5px;
     background-color: var(--color-light-grey);
