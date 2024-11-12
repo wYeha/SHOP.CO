@@ -18,8 +18,16 @@ let currentSlide = 0
 let currentSliderOffset = 0
 
 function isButtonDisabled() {
-	sliderLeftBtn.disabled = currentSlide === 0;
-	sliderRightBtn.disabled = currentSlide === sliderItemCount - 1;
+	const breakpoints = [
+		{ minWidth: 767, disableAt: sliderItemCount - 3 },
+		{ minWidth: 480, disableAt: sliderItemCount - 2 },
+		{ minWidth: 0, disableAt: sliderItemCount - 1 }
+	]
+
+	const disableAt = breakpoints.find(bp => window.innerWidth >= bp.minWidth).disableAt
+
+	sliderRightBtn.disabled = currentSlide === disableAt
+	sliderLeftBtn.disabled = currentSlide === 0
 }
 
 function handleButtonClick(buttonId) {
