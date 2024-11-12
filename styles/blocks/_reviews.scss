@@ -1,35 +1,54 @@
 .reviews {
-	display: grid;
-	grid-template-columns: auto auto;
+	// display: grid;
+	// grid-template-columns: auto auto;
 	gap: 40px;
+	position: relative;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 40px;
+		gap: 30px;
+
+		@include tablet {
+			margin-bottom: 24px;
+		}
+	}
 
 	&__title {}
 
 	&__controls {}
 
 	&__slider-content {
-		grid-column: span 2;
+		// grid-column: span 2;
 		position: relative;
 		height: max-content;
 
+		&::before,
 		&::after {
-			// content: '';
-			// position: absolute;
-			// height: 100%;
-			// width: 400px;
-			// background: rebeccapurple;
-			// top: 0;
-			// left: 0;
-			// z-index: 10;
+			content: '';
+			position: absolute;
+			height: 101%;
+			width: calc(33.333333% - 14px);
+			backdrop-filter: blur(3px);
+			top: -1px;
+			z-index: 1;
+		}
+
+		&::before {
+			left: calc(-1* (33.333333%));
+		}
+
+		&::after {
+			right: calc(-1* (33.333333%));
 		}
 	}
 
 	&__slider {
 		width: 100%;
-		// position: absolute;
 		display: flex;
 		gap: 20px;
-		// left: 0;
 		transition: var(--transition);
 	}
 
@@ -41,6 +60,17 @@
 		padding: 28px;
 		border-radius: var(--border-radius-large);
 		border: var(--border);
+
+		@include mobile {
+			width: calc(50% - 10px);
+			padding: 24px;
+			min-height: auto;
+		}
+
+		@include mobile-s {
+			max-width: 100%;
+			width: 100%;
+		}
 	}
 
 	&__rating {

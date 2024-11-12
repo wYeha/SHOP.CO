@@ -10,6 +10,7 @@ sliderRightBtn.addEventListener('click', function () {
 })
 
 const sliderBlock = document.querySelector('.reviews__slider')
+const sliderItemWidth = sliderBlock.querySelector('.reviews__item')
 const sliderItemCount = sliderBlock.getElementsByClassName('slider__item').length
 
 let sliderOffset
@@ -22,7 +23,7 @@ function isButtonDisabled() {
 }
 
 function handleButtonClick(buttonId) {
-	sliderOffset = -(sliderBlock.offsetWidth * (33.333333 / 100) + 6)
+	sliderOffset = -sliderItemWidth.offsetWidth - 20
 	if (buttonId === sliderLeftBtn) {
 		currentSlide -= 1
 		currentSliderOffset -= sliderOffset
@@ -31,16 +32,15 @@ function handleButtonClick(buttonId) {
 		currentSliderOffset += sliderOffset
 	}
 	isButtonDisabled()
-	sliderBlock.style.left = `${currentSliderOffset}px`
+	sliderBlock.style.transform = `translateX(${currentSliderOffset}px)`;
 }
 
 window.addEventListener('resize', handleResize);
 
 function handleResize() {
-	console.log('changed');
 	isButtonDisabled()
 	currentSlide = 0
 	currentSliderOffset = 0
-	sliderBlock.style.left = 0
+	sliderBlock.style.transform = `translateX(${currentSliderOffset}px)`;
 }
 

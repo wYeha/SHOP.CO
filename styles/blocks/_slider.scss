@@ -1,8 +1,8 @@
 .slider-controls {
 	display: flex;
 	column-gap: 16px;
-	align-self: flex-end;
-	justify-self: flex-end;
+	align-items: flex-end;
+
 
 	&--left,
 	&--right {
