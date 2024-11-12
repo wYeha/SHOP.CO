@@ -10,15 +10,26 @@
 	&__slider-content {
 		grid-column: span 2;
 		position: relative;
+		height: max-content;
+
+		&::after {
+			// content: '';
+			// position: absolute;
+			// height: 100%;
+			// width: 400px;
+			// background: rebeccapurple;
+			// top: 0;
+			// left: 0;
+			// z-index: 10;
+		}
 	}
 
 	&__slider {
 		width: 100%;
-		position: absolute;
+		// position: absolute;
 		display: flex;
 		gap: 20px;
-		left: calc(-1 * (33.333333% + 6px));
-		left: 0;
+		// left: 0;
 		transition: var(--transition);
 	}
 

@@ -1,59 +1,46 @@
-
-
-
-
-
-// function handleButtonClick(buttonId) {
-// 	slideOffset = -(slider.offsetWidth * (33.333333 / 100) + 6)
-// 	if (buttonId === 'sliderLeft') {
-// 		currentSlideCount += slideOffset
-// 	} else if (buttonId === 'sliderRight') {
-// 		currentSlideCount -= slideOffset
-// 	}
-// 	slider.style.left = `${currentSlideCount}px`
-// }
-
-document.getElementById('sliderLeft').addEventListener('click', function () {
-	handleButtonClick('sliderLeft')
-});
-
-document.getElementById('sliderRight').addEventListener('click', function () {
-	handleButtonClick('sliderRight')
-});
-
 const sliderLeftBtn = document.getElementById('sliderLeft')
 const sliderRightBtn = document.getElementById('sliderRight')
 
-const slider = document.querySelector('.reviews__slider')
-const sliderItemCount = slider.getElementsByClassName('slider__item').length
+sliderLeftBtn.addEventListener('click', function () {
+	handleButtonClick(sliderLeftBtn)
+})
 
+sliderRightBtn.addEventListener('click', function () {
+	handleButtonClick(sliderRightBtn)
+})
+
+const sliderBlock = document.querySelector('.reviews__slider')
+const sliderItemCount = sliderBlock.getElementsByClassName('slider__item').length
+
+let sliderOffset
 let currentSlide = 0
-let slideOffset = null
-let currentSlideCount = 0
+let currentSliderOffset = 0
 
-function handleButtonClick(buttonId) {
-	slideOffset = -(slider.offsetWidth * (33.333333 / 100) + 6)
-	if (buttonId === 'sliderLeft') {
-		currentSlide -= 1
-		currentSlideCount -= slideOffset
-	} else if (buttonId === 'sliderRight') {
-		currentSlide += 1
-		currentSlideCount += slideOffset
-	}
-
+function isButtonDisabled() {
 	sliderLeftBtn.disabled = currentSlide === 0;
 	sliderRightBtn.disabled = currentSlide === sliderItemCount - 1;
-	slider.style.left = `${currentSlideCount}px`
 }
 
+function handleButtonClick(buttonId) {
+	sliderOffset = -(sliderBlock.offsetWidth * (33.333333 / 100) + 6)
+	if (buttonId === sliderLeftBtn) {
+		currentSlide -= 1
+		currentSliderOffset -= sliderOffset
+	} else if (buttonId === sliderRightBtn) {
+		currentSlide += 1
+		currentSliderOffset += sliderOffset
+	}
+	isButtonDisabled()
+	sliderBlock.style.left = `${currentSliderOffset}px`
+}
 
 window.addEventListener('resize', handleResize);
 
 function handleResize() {
-	sliderLeftBtn.disabled = currentSlide === 0;
-	sliderRightBtn.disabled = currentSlide === sliderItemCount - 1;
+	console.log('changed');
+	isButtonDisabled()
 	currentSlide = 0
-	currentSlideCount = 0
-	slider.style.left = 0
+	currentSliderOffset = 0
+	sliderBlock.style.left = 0
 }
 
