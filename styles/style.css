@@ -1300,8 +1300,10 @@ h3 {
 }
 
 .reviews {
+  margin-top: 32px;
   gap: 40px;
   position: relative;
+  height: 400px;
 }
 .reviews__header {
   display: flex;

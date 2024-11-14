@@ -1,8 +1,8 @@
 .reviews {
-	// display: grid;
-	// grid-template-columns: auto auto;
+	margin-top: 32px;
 	gap: 40px;
 	position: relative;
+	height: 400px;
 
 	&__header {
 		display: flex;
